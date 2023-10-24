@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">    
+    <title>elementos</title>
+</head>
+
+<style>
+    .minhaClasse {
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        border: 1px solid #000;
+        padding: 10px;
+        border-radius: 8px;
+        background-color: #ccc;
+    }
+
+    .padrao {
+        background-color: #fff;
+    }
+</style>
+
+<body>
+    <button onclick="criarElementoHtml()">Criar elemento HTML</button>
+    <button onclick="aplicarClassBotao()">Aplicar CSS no botao</button>
+    <button onclick="aplicarElementClass()">Aplicar classe nos elementos</button>
+    
+</body>
+
+<script>
+    criarElementoHtml = () => {
+        // criar elemento html
+        const novoElemento = document.createElement('div');
+        novoElemento.id = 'meuDiv';
+        novoElemento.className = 'minhaClasse';
+
+        const texto = document.createTextNode("Esse é o texto que vai no elemento");
+
+        //apendChild = bota o elemento do parâmetro dentro do elemento que chama pelo método
+
+        novoElemento.appendChild(texto);
+
+        document.body.appendChild(novoElemento);
+
+        // resultado = <div id="meuDiv" class="minhaClasse">Esse é o texto que vai no elemento</div>        
+    }
+
+    aplicarClassBotao = () => {
+
+        // seleciona todos os elementos => pode ser feito em conjunto com getElementByXXX (id ou class)
+        const botoes = document.querySelectorAll("button");
+
+        botoes.forEach(function(bt) {
+            bt.style.color = 'blue';
+            bt.style.backgroundColor = "#fff";
+            bt.style.borderRadius = "8px";
+        });
+    }
+
+    aplicarElementClass = () => {
+        /* neste exemplo, ao invés de criar uma variável para reutilizar, o metodo pode ser resumido
+        em uma linha, e se depois quisermos o elemento novamente, basta copiar a linha de 
+        código e alterar o parâmetro do método que vem depois do selector. */
+        document.querySelectorAll("#meuDiv").forEach(function(ele) {
+            ele.classList.add("padrao")
+        });
+        // o parametro do query selector segue a regra de css, id = # , class = . , etc
+    }
+
+</script>
+
+</html>

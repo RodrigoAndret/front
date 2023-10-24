@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <title>Caixa</title>
+    <!--modifica o padrão para aceitar carateres especiais, como acentuação da língua portuguesa-->
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #container-menu-superior {
+            background-color: #333;
+            display: flex;
+            /*justify alinha o conteúdo horizontalmente */
+            /*justify-content: center;*/
+            /*justify-content: space-between; espaço entre os itens mas joga os extremos pro canto*/
+            justify-content: space-around; /*espaço entre os itens e também nos cantos*/
+            /*align items alinha o conteúdo verticalmente */
+            align-items: center;
+        }
+
+        .menu-item {
+            color: #FFF;
+
+        }
+
+        /*hover é ação para quando passar o cursor por cima*/
+        .menu-item:hover {
+            color: #666;
+        }
+
+        #container-menu-lateral {
+            /*vw e vw são unidades dinâmicas, nete caso, que mudam o menu de tamanho conforme
+            ação do usuário, como ajustar o tamanho da janela, etc*/
+            width: 10vw;
+            height: 80vh;
+            background-color: grey;
+
+        }
+
+        /*é possível mencionar classes dentro de elementos específicos sem alterar
+        as demais com o mesmo nome*/
+        #container{
+            display: grid;
+            grid-template-columns: 50% 25% 25%; /*ocupação de cada elemento*/
+            /*grid-template-columns: 50% 25% auto; auto completa com o restante*/
+            gap: 20px; /*espaço, semelhante a margin*/
+            /*grid-template-rows: 50% 25% 25%; mesmo de columns mas para arrumação vertical*/
+        }
+    </style>
+</head>
+
+
+<body>
+    <!--nav é como se fosse um div. Mas div é para conteúdo em blocos e nav é conteúdo de navegação-->
+    <nav id="container-menu-superior">
+        <!--tag 'a' e href é o estilo para link, e # significa vazio-->
+        <a href="#" class="menu-item">item 1</a>
+        <a href="#" class="menu-item">item 2</a>
+        <a href="#" class="menu-item">item 3</a>
+    </nav>
+
+    <div id="container">
+
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+
+    </div>
+</body>
+
+</html>

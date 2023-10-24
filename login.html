@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <title>Login</title>
+    <style>
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #login-container {
+            max-width: 400px;
+            box-shadow: 0px 0px 10px;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .login-form input {
+            width: 380px;
+            padding: 10px;
+            margin-bottom: 15px;
+            height: 40px;
+        }
+
+        #login-container button {
+            background-color: blue;
+            color: white;
+            width: 380px;
+            height: 30px;
+        }
+
+        .container-erro {
+            color: red;
+        }
+        
+    </style>
+    <script src="validalogin.js" text="javascript"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div class id="login-container">
+            <h2>Formulário login</h2>
+            <form class="login-form">
+                <!--placeholder é o texto padrão antes do click-->
+                <input type="text" placeholder="Usuário" />
+                <input type="password" placeholder="Senha" id="senha" />
+                <button type="submit" onclick="validaSenha()">Entrar</button>
+            </form>
+            <div class="container-erro">
+                <span class="mensagem-padrao"></span>
+                <span class="mensagem-erro"></span>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

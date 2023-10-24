@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <title>Tabuada</title>
+</head>
+<script src="tabuada.js" text="javascript"></script> 
+<!-- mesma logica do CSS para chamar arquivos próprios de JS -->
+<script>
+    // comentario
+
+    /* depuracao no console do navegador:
+    f8 = proximo breakpoint ou encerrar se ultimo breakpoint
+    f10 = proxima linha
+    f5 = recomecar ou 'reload'
+
+    variaveis = const (constante, inflexível; não pode ser mudada), let (flexível; pode ser mudada)
+    e var (raramente usada, mais prevalente em projetos legado)
+
+    const nomeProduto = 'Mouse';
+    const quantidade = 3;
+    const valor = 10;
+    const tipo = true;
+    
+    console.log(quantidade+valor)
+    */
+
+    
+    </script>
+    
+    <style>
+        input.erro {
+            color: red;
+        }
+    </style>
+
+    <body>
+        <form>
+            <input type="text" id="tabuada" placeholder="digite o valor da tabuada" />
+            <button onclick="calcular()">calcular</button>
+        </form>
+
+        <div id="tabuada-resultado">
+
+        </div>
+
+    </body>
+    <script>
+        /* esconde o box do resultado logo após carregar a página -- necessário ser depois de carregar,
+        pois estes elementos são inexistentes antes*/
+        const elementResultado = document.getElementById('tabuada-resultado');
+        elementResultado.style.visibility = 'hidden';
+    </script>
+</html>

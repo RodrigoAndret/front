@@ -1,0 +1,110 @@
+<html>
+
+<head>
+    <title>Formulários</title>
+</head>
+
+<body style="background-color: #FFFFFF; color: #000; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+    <!--"style" já é mexer com CSS. Neste caso, é o modo in-line de formatação-->
+    <h1 style="text-align: center;">Formulários</h1>
+    <fieldset style="background-color: #ccc;">
+        <!--fieldset cria uma "seção" de elementos-->
+        <legend style="color: #ffff00;">Dados pessoais</legend> <!--legenda-título do fieldset-->
+        <form action="" method="">
+            <!--action e method são possíveis atributos de formularios, que podem ser substituidos por eventos determinados na linguagem de programação utilizada-->
+            <label>Nome: </label> <!--label somente identifica o campo do formulário, "dá um nome" pra ele-->
+            <input type="text" name="nome" id="nome"
+                required /><!--o name servirá pra identificar o campo no backend, e o id para identificar com CSS na hora de formatar-->
+            <!--todos os campos de um formulário precisam de um nome pra serem buscados pelo backend-->
+
+            <p>
+                <label>E-Mail: </label>
+                <input type="email" name="email" id="email" />
+                <!--é possível separar por parágrafos, mas isso é mais comumente feito por CSS-->
+            </p>
+
+            <p>
+                <label>Sexo: </label>
+                <label>
+                    <input type="radio" name="sexo" /> <span
+                        style="color: #ffff00; background-color: green;">Masculino</span>
+                    <!--span nesse caso serviu para editar a cor de somente uma palavra-->
+                </label>
+                <label>
+                    <input type="radio" name="sexo" /> Feminino
+                </label>
+                <!--se o nome das opções dos Radio buttons não for o mesmo, não funciona como radio-->
+
+            </p>
+
+    </fieldset>
+
+    <label>Esportes </label>
+    <label>
+        <input type="checkbox" name="esporte" /> Futebol
+        <input type="checkbox" name="esporte" /> Volei
+        <input type="checkbox" name="esporte" /> basquete
+    </label>
+    <!--a lógica do checkbox é a mesma do radio, se o nome não for o mesmo, o input não levará as opções sem o "name" correto-->
+    <label>Senha: </label>
+    <input type="password" name="password" id="password" />
+
+    <label>Cor </label>
+    <input type="color" name="cor" id="cor" />
+
+    <label>Data: </label>
+    <input type="date" name="data" id="data" />
+
+    <label>Arquivo </label>
+    <input type="file" name="arquivo" id="arquivo" disabled />
+
+    <input type="hidden" name="ip" />
+    <!--serve para coleta de algum dado que tem valor necessário mas disponibilização desnecessária-->
+
+    <label>Mês: </label>
+    <input type="month" name="month" id="month" />
+
+    <label>Número: </label>
+    <input type="number" name="number" id="number" />
+
+    <input type="range" name="range" id="range" />
+
+    <input type="week" />
+
+    <input type="search" name="search" id="search" />
+
+    <input type="submit" value="enviar">
+    <input type="reset" value="limpar">
+    <!--e varios outros...-->
+
+    <p>
+        <label>Mensagem:</label>
+        <textarea rows="3" name="mensagem"></textarea>
+    </p>
+    <!--textarea funciona como um input, mas possui tamanho ajustável-->
+    <!--lembrando sempre que a formatação é melhor feita no CSS-->
+
+    <label>Estado:</label>
+    <select name="Estado">
+        <optgroup label="Sul" disabled>
+            <option value="Parana">Paraná</option>
+            <option value="sc">sc</option>
+            <option value="rs">rs</option>
+        </optgroup>
+
+        <optgroup label="Sudeste">
+            <option value="sao paulo">SP</option>
+            <option value="minas gerais">MG</option>
+            <option value="espirito santo" disabled>ES</option>
+            <option value="rio de janeiro">rj</option>
+        </optgroup>
+
+
+
+    </select>
+    </form>
+    <button>Clique aqui!</button>
+
+</body>
+
+</html>

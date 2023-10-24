@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <title>CSS</title>
+    <!--a seguir, formatação CSS em bloco, um dos métodos de formatar com CSS-->
+    <style>        
+        /*essas formataçõs servem somente para elementos que são "caixas", posteriormente veremos outras formas*/
+
+        P{
+            background-color: aqua;
+            border: 1px solid #000;
+            line-height: 20px;
+            text-align: justify;
+            
+            /*padding = espaço interno da caixa
+            
+            todos os lados
+            padding: 15px;
+
+            lados individuais
+            padding-left: 15px; ou right ou top ou bottom*/
+
+            padding: 20px 10px 0px 15px;
+
+            margin-bottom: 50px;
+            margin-left: 20px;
+
+            /* margin-left: auto;
+            margin-right: auto; 
+            centraliza a caixa do parágrafo*/
+
+            width: 250px;
+            height: 250px;
+        
+        }
+        body{
+            color: #000;
+        }
+        
+        h1{
+            text-align: center;
+            border: 1px;
+        }
+
+        span{
+            border: 2px solid #000;
+        }
+
+        /*edição de múltiplos elementos simultaneament, com os mesmos valores para seus atributos*/
+        
+        table, td, th {
+            border: 1px solid #000;
+        }
+        
+        table{
+            border-radius: 1px;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <h1>CSS</h1>
+    <hr />
+    <p style="border: none"> <!--o estilo de cada propriedade será obedecido pelo comando mais próximo do elemento, "sobrepõe" o estilo "geral" que foi definido em bloco anteriormente--> teestestetteestestetteesteste Teste com acento:
+        ééééé<br />tteestestetteestestetteestes<span>tettees</span>testetteestestetteestestetteestestetteestestetteestestetteestestetteestestetteestestetteestestet
+    </p>
+    <p>Segundo paragrafo Segundo teste com acento: ééééé<br /> segunda quebra</p>
+
+    <p style="margin-bottom: auto; line-height: normal; background-color: green;" >
+        terceiro paragrafo
+    </p>
+
+    texto fora do parágrafo
+
+    <table>
+        <tr>
+           
+            <th colspan="3">Tabela de preços - produtos de informática</th>
+            
+        </tr>
+        <tr>
+            <th>Produto</th> 
+            <th>Descrição</th>
+            <th>Preço</th>
+        </tr>
+        <tr>
+            <td>Mouse</td>
+            <td>Mouse óptico sem fio</td>
+            <td>R$ 45,99</td>
+        </tr>
+        <tr>
+            <td>Teclado</td>
+            <td>Teclado mecanico</td>
+            <td>R$ 350,00</td>
+        </tr>
+        <tr>
+            <th colspan="2">Total</th>
+            <td>soma tudo preguiça</td>
+        </tr>
+    </table>
+</body>
+
+</html>

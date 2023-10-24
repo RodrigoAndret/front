@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>elementos 2</title>
+</head>
+
+<style>
+    
+</style>
+
+<body>    
+
+</body>
+
+<script>
+
+    setTimeout(() => {
+        console.log("timeout de 1000"); // qualquer acão pode ser realizada aqui
+    }, 1000); // número de milisegundos até que a acão seja executada
+
+    const aleatorio = Math.floor(Math.random() * 100);
+
+    const valores = [10,25,8]
+    console.log(valores);   
+    valores.push(aleatorio);
+    console.log(valores); 
+
+    console.log("mensagem depois do timeout de 1000 mas aparece antes");
+
+    const stringValor = "52,8,Rodrigo,23"
+    console.log(stringValor);
+    // split separa a string em um array após o caractere especificado
+    console.log(stringValor.split(','));
+</script>
+
+</html>

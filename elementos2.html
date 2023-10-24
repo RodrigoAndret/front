@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>elementos 2</title>
+</head>
+
+<style>
+    .minhaClasse {
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        border: 1px solid #000;
+        padding: 10px;
+        border-radius: 8px;
+        background-color: #ccc;
+    }
+
+    .padrao {
+        background-color: #fff;
+    }
+
+    .oculto {
+        display: none;
+    }
+</style>
+
+<body>
+    <button onclick="criarElementoHtml()">Criar elemento HTML</button>
+    <button onclick="alterarCssBotao()">Alterar CSS no botao</button>
+    <button id='bt-aplicar'class="oculto" onclick="aplicarElementClass()">Aplicar classe nos elementos</button>
+
+</body>
+
+<script>
+    criarElementoHtml = () => {
+
+        const novoElemento = document.createElement('div');
+
+        const valor = Math.floor(Math.random() * 100);
+
+        if (valor > 50) {
+            novoElemento.className = 'minhaClasse';
+        }
+        
+        // id sendo atribuido dinamicamente
+        novoElemento.id = 'meuDiv' + valor;
+
+        const texto = document.createTextNode("Esse é o texto que vai no elemento");
+
+        novoElemento.appendChild(texto);
+
+        document.body.appendChild(novoElemento);
+
+        document.getElementById("bt-aplicar").classList.remove("oculto");
+
+    }
+
+    alterarCssBotao = () => {
+
+        const botoes = document.querySelectorAll("button");
+
+        botoes.forEach(function (bt) {
+            bt.style.color = 'blue';
+            bt.style.backgroundColor = "#fff";
+            bt.style.borderRadius = "8px";
+        });        
+    }
+
+    aplicarElementClass = () => {
+
+        /* a seguinte linha pode ser substutída por uma condicional. Uma maneira mais moderna de aplicar
+        tal condicial é com um "?" após a validacao. exemplo:
+        document.querySelectorAll("#meuDiv")?.forEach(function (ele) {*/
+        document.querySelectorAll("#meuDiv").forEach(function (ele) {
+            ele.classList.add("padrao")
+        });
+
+       
+    }
+
+</script>
+
+</html>
